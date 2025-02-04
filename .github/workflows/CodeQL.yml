@@ -34,5 +34,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: codeql-results  # アップロードするアーティファクトの名前
-          path: /home/runner/work/AwesomeToDo/results/ # スキャン結果が保存されるディレクトリを指定
+          path: /home/runner/work/vulnapp/results/ # スキャン結果が保存されるディレクトリを指定
           retention-days: 7      # アーティファクトの保存日数（7日間保持）
