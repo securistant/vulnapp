@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 3 * * 1' # 毎週月曜日の3時に自動実行
+    - cron: '0 3 * * 1' # 毎週月曜日の3時(UTC)に自動実行
 
 jobs:
   analyze:
@@ -25,13 +25,14 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: 'html, php, javascript' # スキャン対象の言語を指定
+          languages: 'javascript' # スキャン対象の言語を指定
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
       - name: Upload CodeQL Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: codeql-results
-          path: /github/workspace/results
+          name: codeql-results  # アップロードするアーティファクトの名前
+          path: /home/runner/work/AwesomeToDo/results/ # スキャン結果が保存されるディレクトリを指定
+          retention-days: 7      # アーティファクトの保存日数（7日間保持）
