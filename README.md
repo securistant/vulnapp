@@ -14,17 +14,17 @@
    - プライバシーは「**Public**」で作成
    - 「Add a README file」「Add .gitignore」「Choose a license」などは**チェックしない／None**を選択
 2. 新しいリポジトリのSSH（またはHTTPS）のURLをコピー
-   - git@github.com:ユーザー名/vulnapp.git
+   - `git@github.com:ユーザー名/vulnapp.git`
 3. 以下のコマンドを実行して、自身のGitHubリポジトリにPush
 
 ```sh
-$ cd    # 以下はルートディレクトリに作成
-$ git clone https://github.com/securistant/vulnapp.git
-$ cd vulnapp/
-$ git remote remove origin
-$ git remote -v
-$ git remote add origin git@github.com:ユーザー名/vulnapp.git
-$ git remote -v
-$ git branch -M main
-$ git push -u origin main
+cd    # 以下はルートディレクトリに作成
+git clone https://github.com/securistant/vulnapp.git
+cd vulnapp/
+git remote remove origin
+git remote -v
+git remote add origin git@github.com:ユーザー名/vulnapp.git
+git remote -v
+git branch -M main
+git push -u origin main
 ```
