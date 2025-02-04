@@ -21,8 +21,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          #fetch-depth: 1 # 最新の変更のみ取得
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
