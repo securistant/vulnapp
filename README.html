@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section class="level1" aria-labelledby="演習用の脆弱性のあるアプリケーション">
+      <h1 id="h1_0">演習用の脆弱性のあるアプリケーション</h1>
+      <ul>
+        <li>CodeQL</li>
+        <li>Dependabot</li>
+        <li>Trivy</li>
+        <li>Secrets Scanning</li>
+      </ul>
+      <section class="level2" aria-labelledby="使い方">
+        <h2 id="h2_0">使い方</h2>
+        <p>自身のGitHubリポジトリに本リポジトリをPushして使用して下さい。</p>
+        <section class="level3" aria-labelledby="新しいリポジトリの準備">
+          <h3 id="h3_0">新しいリポジトリの準備</h3>
+          <ol>
+            <li>GitHubのページで新しいリポジトリを「<strong>Public</strong>」で作成
+              <ul>
+                <li>リポジトリ名（Repository name）は何でもOK（ここでは「<strong>vulnapp</strong>」として作成）</li>
+                <li>Descriptionは何でもOK</li>
+                <li>プライバシーは「<strong>Public</strong>」で作成</li>
+                <li>「Add a README file」「Add .gitignore」「Choose a license」などは<strong>チェックしない／None</strong>を選択</li>
+              </ul>
+            </li>
+            <li>新しいリポジトリのSSH（またはHTTPS）のURLをコピー
+              <ul>
+                <li><a href="mailto:git@github.com">git@github.com</a>:ユーザー名/vulnapp.git</li>
+              </ul>
+            </li>
+            <li>以下のコマンドを実行して、自身のGitHubリポジトリにPush</li>
+          </ol>
+          <pre class="language-sh"><code class="language-sh">$ cd    # 以下はルートディレクトリに作成
+$ git clone https://github.com/securistant/vulnapp.git
+$ cd vulnapp/
+$ git remote remove origin
+$ git remote -v
+$ git remote add origin git@github.com:ユーザー名/vulnapp.git
+$ git remote -v
+$ git branch -M main
+$ git push -u origin main</code></pre>
+
+        </section>
+      </section>
+    </section>
+  
+
+</body></html>
